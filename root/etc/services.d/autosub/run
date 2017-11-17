@@ -1,4 +1,6 @@
 #!/usr/bin/with-contenv bash
 
+cd /app/autosub || exit
+
 exec \
-	s6-setuidgid abc python /app/autosub/AutoSub.py -l
+	s6-setuidgid abc python AutoSub.py -l
