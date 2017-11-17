@@ -1,0 +1,19 @@
+#!/usr/bin/with-contenv bash
+
+# copy default config.properties if not present
+[[ ! -e /config/config.properties ]] && \
+	cp /app/autosub/default.config.properties /config/config.properties
+
+# copy (empty) database.db if not present
+[[ ! -e /config/database.db ]] && \
+	cp /app/autosub/default.database.db /config/database.db
+
+# symlink to autosub app folder
+ln -s /config/config.properties /app/autosub/config.properties
+ln -s /config/database.db /app/autosub/database.db
+
+# permissions
+chown -R abc:abc \
+  /app/autosub \
+	/config \
+	/tv
