@@ -10,9 +10,6 @@ RUN \
 # copy local files
 COPY root/ /
 
-# copy default properties & default database
-# COPY app/autosub/ /app/autosub/
-
 # ports and volumes
 EXPOSE 9960
 VOLUME /config /tv
