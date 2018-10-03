@@ -8,6 +8,15 @@
 
 [[ ! -e /config/AutoSubService.log ]] && \
 	cp /defaults/AutoSubService.log /config/AutoSubService.log
+
+[[ ! -e /app/autosub/config.properties ]] && \
+	ln -sf /config/config.properties /app/autosub/config.properties
+
+[[ ! -e /app/autosub/database.db ]] && \
+	ln -sf /config/database.db /app/autosub/database.db
+
+[[ ! -e /app/autosub/AutoSubService.log ]] && \
+	ln -sf /config/AutoSubService.log /app/autosub/AutoSubService.log
 	
 # permissions
 chown -R abc:abc \
