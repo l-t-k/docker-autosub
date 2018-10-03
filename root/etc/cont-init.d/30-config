@@ -1,5 +1,14 @@
 #!/usr/bin/with-contenv bash
 
+[[ ! -e /config/config.properties ]] && \
+	cp /defaults/config.properties /config/config.properties
+
+[[ ! -e /config/database.db ]] && \
+	cp /defaults/database.db /config/database.db
+
+[[ ! -e /config/AutoSubService.log ]] && \
+	cp /defaults/AutoSubService.log /config/AutoSubService.log
+	
 # permissions
 chown -R abc:abc \
   /app/autosub \
