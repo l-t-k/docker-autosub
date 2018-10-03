@@ -3,4 +3,4 @@
 cd /app/autosub || exit
 
 exec \
-	s6-setuidgid abc python AutoSub.py -c /config/config.properties -l
+	s6-setuidgid abc python AutoSub.py -c/config/config.properties
